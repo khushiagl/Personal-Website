@@ -1,0 +1,244 @@
+/* General Styling */
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: black; /* Set the body background to black */
+}
+
+main h1 {
+    margin-top: 58px; /* Adjusted to achieve 128px spacing with header height */
+    /* other styles... */
+    font-size: 18px;
+}
+
+/* Header */
+header {
+    background-color: rgb(51, 51, 51); /* Darker background for the header */
+    color: white; /* Header text color */
+    height: 70px; /* Set a fixed height */
+    line-height: 70px; /* Align text vertically */
+    width: 100%;
+    box-sizing: border-box; /* to fix the width issue */
+    display: flex;
+    justify-content: flex-start; /* Align links to the left */
+    padding-left: 1rem; /* Left padding - to fix the home left spoacing issue */
+    /* margin-bottom: 128px; */
+    position: absolute;
+    top: 0px;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    color: rgb(0, 184, 212); /* Non-active link color */
+    margin-right: 2rem; /* Spacing between links */
+    text-decoration: none;
+    font-weight: normal;
+    /* transition: color 0.3s; Smooth transition for hover effect */
+}
+
+header nav a:hover {
+    color: white; /* Link color on hover */
+}
+
+header nav a.active {
+    color: rgb(178, 245, 234); /* Active link color */
+    font-weight: bold;
+}
+
+header nav a.active:hover {
+    color: white; /* This will ensure the active link turns white on hover */
+}
+
+main h1.contact-heading {
+    margin-top: 32px; /* Reduced margin for the specific heading on contact.html */
+}
+
+/* Main Content */
+main {
+    text-align: center;
+    /* margin: 128px 0; */
+    padding: 0 0.5rem;
+    color: white;
+    margin-top: 128px; 
+    margin-bottom: 128px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.circle {
+    border-radius: 100px; /* Makes the frame circular */
+    width: 200px; /* Width of the frame */
+    height: 200px;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.portrait {
+    object-fit: cover; /* Ensures the image covers the frame while maintaining aspect ratio */
+    margin-bottom: 0;
+    width: 200px; /* Width of the frame */
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.email {
+    font-family: 'Times New Roman', serif;
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Footer background color, matching the header */
+    color: white; /* Footer text color */
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0px;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+/* Form and Input Styling */
+input, textarea, select {
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    width: calc(100% - 1.6rem); /* Account for padding */
+    background-color: #f0f0f0; /* Background color for input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    color: black; /* Text color for input fields */
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+input[type="submit"] {
+    background-color: #00b8d4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 1.2rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #009da6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 0 1rem; /* Adjust padding for smaller screens */
+    }
+
+    main {
+        margin: 128px 0.5rem; /* Adjust margin for main content on smaller screens */
+    }
+
+    header a {
+        margin-right: 1rem; /* Adjust spacing between links for smaller screens */
+    }
+
+    .project-card img {
+        width: 100%; /* Full width on small screens */
+    }
+
+    form input[type="email"],
+    form select,
+    form textarea,
+    form input[type="file"],
+    form button {
+        width: calc(100% - 2rem); /* Adjust input width on smaller screens */
+        margin: 0.5rem 0; /* Adjust margin for form elements */
+    }
+
+    form input[type="checkbox"] {
+        /* No change required for checkbox size, it will scale proportionally */
+    }
+}
+
+@media (max-width: 450px) {
+    header, footer {
+        padding: 0 0.5rem; /* Reduce padding for very small screens */
+    }
+}
+
+/* List Styling */
+ul {
+    list-style: none; /* Removes the default bullet points */
+    padding-left: 0; /* Removes default padding */
+    margin-left: 0; /* Aligns with the left edge of the container */
+}
+
+ul li::before {
+    content: '•'; /* Adds a bullet point */
+    color: white; /* Sets bullet point color to white to match your color scheme */
+    display: inline-block; /* Makes the bullet point inline with text */
+    width: 1em; /* Space for the bullet point */
+    margin-left: -1em; /* Negative margin to align with the text outside */
+}
+
+li {
+    text-align: left; /* Aligns the text to the left */
+    padding-left: 1em; /* Padding to separate the bullet from the text */
+}
+
+/* Project Cards Styling */
+.project-card {
+    margin-bottom: 2rem; /* Space between project cards */
+}
+
+.project-image {
+    width: 100%; /* Adjust width as necessary, or max-width for larger views */
+    height: auto;
+    border-radius: 10px; /* Optional: if you want rounded corners */
+}
+
+/* Form Styling */
+form {
+    margin: 0.5rem;
+}
+
+form input[type="email"],
+form select,
+form textarea,
+form input[type="file"] {
+    padding: 0.8rem;
+    margin-bottom: 1rem; /* Space between form elements */
+    width: calc(100% - 1.6rem); /* Full width minus padding */
+}
+
+form input[type="checkbox"] {
+    transform: scale(1.5); /* 50% larger checkbox */
+    margin-right: 0.5rem; /* Space between checkbox and label */
+}
+
+form button {
+    padding: 0.8rem 1.2rem;
+    background-color: #00b8d4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

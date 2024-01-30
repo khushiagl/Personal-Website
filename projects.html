@@ -1,0 +1,62 @@
+x<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Projects</h1>
+        <p>Here are some of my current and past projects.</p>
+        
+        <!-- Project Cards Section -->
+        <div class="project-card">
+            <img src="project1.jpg" alt="Project 1" class="project-image">
+            <h2>Project 1 Title</h2>
+            <p>Description of Project 1, explaining what was accomplished and the technologies used.</p>
+        </div>
+        <div class="project-card">
+            <img src="project2.jpg" alt="Project 2" class="project-image">
+            <h2>Project 2 Title</h2>
+            <p>Description of Project 2, explaining what was accomplished and the technologies used.</p>
+        </div>
+        <div class="project-card">
+            <img src="project3.jpg" alt="Project 3" class="project-image">
+            <h2>Project 3 Title</h2>
+            <p>Description of Project 3, explaining what was accomplished and the technologies used.</p>
+        </div>
+
+        <!-- Call to Action for Development Inquiry -->
+        <p>Need a full stack web developer? Tell me about your project.</p>
+
+        <!-- Project Inquiry Form -->
+        <form action="https://postman-echo.com/post" method="post">
+            <input type="email" name="email" required placeholder="Enter your email">
+            <select name="projectType" required>
+                <option value="personal-website">Personal Website</option>
+                <option value="ecommerce">eCommerce</option>
+                <option value="game">Game</option>
+            </select>
+            <textarea name="description" required placeholder="Enter your project concept here"></textarea>
+            <input type="file" name="attachment">
+            <label>
+                <input type="checkbox" name="consent" required>You agree to receive emails from me
+            </label>
+            <button type="submit">Send</button>
+        </form>
+    </main>
+    <footer>
+        <p>Copyright 2024 by agraw230.</p>
+    </footer>
+</body>
+</html>
