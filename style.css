@@ -10,102 +10,58 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: black; /* Set the body background to black */
+    background-color: black; 
 }
 
 main h1 {
-    margin-top: 58px; /* Adjusted to achieve 128px spacing with header height */
-    /* other styles... */
-    font-size: 18px;
+    margin-top: 58px; 
 }
 
 /* Header */
 header {
-    background-color: rgb(51, 51, 51); /* Darker background for the header */
-    color: white; /* Header text color */
-    height: 70px; /* Set a fixed height */
-    line-height: 70px; /* Align text vertically */
+    background-color: rgb(43, 41, 41); 
+    color: white; 
+    height: 70px; 
+    line-height: 70px; 
     width: 100%;
-    box-sizing: border-box; /* to fix the width issue */
+    box-sizing: border-box; 
     display: flex;
-    justify-content: flex-start; /* Align links to the left */
-    padding-left: 1rem; /* Left padding - to fix the home left spoacing issue */
-    /* margin-bottom: 128px; */
+    justify-content: flex-start; 
+    padding-left: 1rem; 
     position: absolute;
     top: 0px;
 }
 
 header nav {
     display: flex;
+    justify-items: left;
 }
 
 header nav a {
-    color: rgb(0, 184, 212); /* Non-active link color */
-    margin-right: 2rem; /* Spacing between links */
+    color:#00b8d4; 
+    margin-right: 2rem; 
     text-decoration: none;
     font-weight: normal;
-    /* transition: color 0.3s; Smooth transition for hover effect */
 }
 
 header nav a:hover {
-    color: white; /* Link color on hover */
+    color: white; 
 }
 
 header nav a.active {
-    color: rgb(178, 245, 234); /* Active link color */
+    color: #b2f5ea; 
     font-weight: bold;
 }
 
 header nav a.active:hover {
-    color: white; /* This will ensure the active link turns white on hover */
-}
-
-main h1.contact-heading {
-    margin-top: 32px; /* Reduced margin for the specific heading on contact.html */
-}
-
-/* Main Content */
-main {
-    text-align: center;
-    /* margin: 128px 0; */
-    padding: 0 0.5rem;
-    color: white;
-    margin-top: 128px; 
-    margin-bottom: 128px;
-    display: flex;
-    flex-direction: column;
-}
-
-div.circle {
-    border-radius: 100px; /* Makes the frame circular */
-    width: 200px; /* Width of the frame */
-    height: 200px;
-    overflow: hidden;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-img.portrait {
-    object-fit: cover; /* Ensures the image covers the frame while maintaining aspect ratio */
-    margin-bottom: 0;
-    width: 200px; /* Width of the frame */
-    height: 200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.email {
-    font-family: 'Times New Roman', serif;
+    color: white; 
 }
 
 /* Footer */
 footer {
-    background-color: #333; /* Footer background color, matching the header */
-    color: white; /* Footer text color */
+    background-color:rgb(43, 41, 41); 
+    color: white; 
     height: 3rem;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,128 +73,244 @@ footer {
 
 footer p {
     margin: 0;
-    padding: 0;
+    padding: 0.5rem;
     font-size: 1rem;
 }
 
-/* Form and Input Styling */
-input, textarea, select {
-    margin: 0.5rem 0;
-    padding: 0.8rem;
-    width: calc(100% - 1.6rem); /* Account for padding */
-    background-color: #f0f0f0; /* Background color for input fields */
-    border: 1px solid #ccc; /* Border for input fields */
-    color: black; /* Text color for input fields */
+main h1.contact-heading {
+    margin-top: 32px; 
 }
 
-input[type="checkbox"] {
-    transform: scale(1.5);
-}
-
-input[type="submit"] {
-    background-color: #00b8d4;
+/* Main Content */
+main {
+    text-align: center;
+    padding: 0 2rem;
     color: white;
-    border: none;
-    cursor: pointer;
-    padding: 0.8rem 1.2rem;
+    margin-top: 128px; 
+    margin-bottom: 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-input[type="submit"]:hover {
-    background-color: #009da6;
+div.circle {
+    border-radius: 100px; 
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+img.portrait {
+    object-fit: cover; 
+    margin-bottom: 0;
+    width: 200px; 
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.email {
+    font-family: 'Times New Roman', serif;
+}
+
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+    color: white; 
+    background-color: rgb(43, 41, 41); 
+}
+
+
+.table-container th, 
+.table-container td {
+    width: 16.667%; /* Divide by the number of columns */
+}
+
+th, td {
+    border: 1px solid #fff; 
+    padding: 8px; 
+    text-align: center;
+}
+
+th {
+    background-color: #444; 
+}
+
+td {
+    background-color: #555; 
+}
+
+
+.lecture {
+    background-color: #00b8d4;
+}
+
+.table-container {
+    overflow-x: auto;
+    width: 80%;
+    align-self: center;
+}
+ label, p, h1, h2 {
+    padding: 0.5 rem;
+ }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     header, footer {
-        padding: 0 1rem; /* Adjust padding for smaller screens */
+        padding: 0 1rem; 
     }
 
     main {
-        margin: 128px 0.5rem; /* Adjust margin for main content on smaller screens */
+        margin: 128px 0.5rem; 
     }
 
     header a {
-        margin-right: 1rem; /* Adjust spacing between links for smaller screens */
+        margin-right: 1rem; 
     }
 
     .project-card img {
-        width: 100%; /* Full width on small screens */
+        width: 100%; 
+    }
+       
+
+    .project-card {
+        margin: 0.5em;
+      }
+    
+      .project-tags-container{
+        display: block;
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+
+      .table-container {
+        overflow-x: scroll;
+        width: 100%;
     }
 
-    form input[type="email"],
-    form select,
-    form textarea,
-    form input[type="file"],
-    form button {
-        width: calc(100% - 2rem); /* Adjust input width on smaller screens */
-        margin: 0.5rem 0; /* Adjust margin for form elements */
-    }
-
-    form input[type="checkbox"] {
-        /* No change required for checkbox size, it will scale proportionally */
-    }
 }
 
 @media (max-width: 450px) {
     header, footer {
-        padding: 0 0.5rem; /* Reduce padding for very small screens */
+        padding: 0 0.5rem; 
     }
 }
 
 /* List Styling */
 ul {
-    list-style: none; /* Removes the default bullet points */
-    padding-left: 0; /* Removes default padding */
-    margin-left: 0; /* Aligns with the left edge of the container */
+    align-self: center;
 }
 
 ul li::before {
-    content: '•'; /* Adds a bullet point */
-    color: white; /* Sets bullet point color to white to match your color scheme */
-    display: inline-block; /* Makes the bullet point inline with text */
-    width: 1em; /* Space for the bullet point */
-    margin-left: -1em; /* Negative margin to align with the text outside */
+    color: white; 
 }
 
 li {
-    text-align: left; /* Aligns the text to the left */
-    padding-left: 1em; /* Padding to separate the bullet from the text */
+    text-align: left; 
+    padding-left: 1em; 
 }
 
 /* Project Cards Styling */
+  
+ 
 .project-card {
-    margin-bottom: 2rem; /* Space between project cards */
-}
-
-.project-image {
-    width: 100%; /* Adjust width as necessary, or max-width for larger views */
-    height: auto;
-    border-radius: 10px; /* Optional: if you want rounded corners */
-}
+    background-color: #333;
+    margin: 1em;
+    box-shadow: 0 4px 8px 0 rgba(246, 244, 244, 0.2);
+    border-radius: 5px; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    width: 80%;
+    border: 1px solid #fff;
+  }
+  
+  .project-image {
+    max-width: 80%;
+    display: block;
+    border-radius: 5px;
+    margin: 2rem auto;
+  }
+  
+  .project-info {
+    padding: 16px;
+  }
+  
+  .project-title {
+    margin-top: 0;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+  }
+  
+  .project-tags-container {
+    margin-top: 10px;
+  }
+  
+  .project-tag {
+    display: inline-block;
+    padding: 8px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 0.8em;
+  }
+  
 
 /* Form Styling */
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
 form {
-    margin: 0.5rem;
+    width: 80%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 
-form input[type="email"],
-form select,
-form textarea,
-form input[type="file"] {
+select:invalid { color: gray; }
+ 
+
+input[type="email"], input[type="file"], textarea, select {
+    margin: 0.5rem 0;
     padding: 0.8rem;
-    margin-bottom: 1rem; /* Space between form elements */
-    width: calc(100% - 1.6rem); /* Full width minus padding */
+    width:100%;
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    color: black; 
+    border-radius: 10px;
 }
 
-form input[type="checkbox"] {
-    transform: scale(1.5); /* 50% larger checkbox */
-    margin-right: 0.5rem; /* Space between checkbox and label */
+
+.description{
+    font-family: sans-serif;
+    font-size: 13px;
 }
 
-form button {
+.left-label{
+    text-align: left;
+    display: block;
+}
+button {
     padding: 0.8rem 1.2rem;
     background-color: #00b8d4;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+    margin-top:  1rem; 
+}
+
+button:hover {
+    background-color:  #b2f5ea;
 }

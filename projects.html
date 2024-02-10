@@ -18,40 +18,77 @@ x<!DOCTYPE html>
     <main>
         <h1>Projects</h1>
         <p>Here are some of my current and past projects.</p>
-        
-        <!-- Project Cards Section -->
-        <div class="project-card">
-            <img src="project1.jpg" alt="Project 1" class="project-image">
-            <h2>Project 1 Title</h2>
-            <p>Description of Project 1, explaining what was accomplished and the technologies used.</p>
-        </div>
-        <div class="project-card">
-            <img src="project2.jpg" alt="Project 2" class="project-image">
-            <h2>Project 2 Title</h2>
-            <p>Description of Project 2, explaining what was accomplished and the technologies used.</p>
-        </div>
-        <div class="project-card">
-            <img src="project3.jpg" alt="Project 3" class="project-image">
-            <h2>Project 3 Title</h2>
-            <p>Description of Project 3, explaining what was accomplished and the technologies used.</p>
-        </div>
+    
+  <div class="project-card">
+  <img class="project-image" src="project1.jpg" alt="Wave">
+  <div class="project-info">
+    <h2 class="project-title">Ghost Board</h2>
+    <p class="project-description">     
+    This web app helps businesses that use the services of Voiceflow identify why and how many of their customers are leaving their chatbots by creating an analytics dashboard that displays various reasons why users quit a conversation with a chatbot.</p>
+    <div class="project-tags-container">
+        <span class="project-tag">React</span>
+        <span class="project-tag">Node.js</span>
+        <span class="project-tag">MongoDB</span>
+        <span class="project-tag">Express.js</span>
+    </div>
+  </div>
+</div>
 
-        <!-- Call to Action for Development Inquiry -->
+<div class="project-card">
+    <img class="project-image" src="project2.jpg" alt="Wave">
+    <div class="project-info">
+      <h2 class="project-title">A11YLabs Simulation UI</h2>
+      <p class="project-description">     
+        A11YLabs Simulation UI is a web application designed for software developers and accessibility testers. It is a testing platform that enables users to simulate Web Content Accessibility Guidelines (WCAG) violations, which often contain legal and intricate language that can be difficult for a regular user to comprehend.</p>
+      <div class="project-tags-container">
+        <span class="project-tag">React</span>
+        <span class="project-tag">Node.js</span>
+        <span class="project-tag">AWS</span>
+        <span class="project-tag">Prisma</span>
+        <span class="project-tag">GraphQL</span>
+      </div>
+    </div>
+  </div>
+  <div class="project-card">
+    <img class="project-image" src="project3.jpg" alt="Wave">
+    <div class="project-info">
+      <h2 class="project-title">Machine Learning Models in Education</h2>
+      <p class="project-description">     
+        Enhanced Autoencoder neural network using mini-batch gradient descent, dropout layers, early stopping, and learning rate scheduler with 70% test accuracy.</p>
+      <div class="project-tags-container">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Tensorflow</span>
+      </div>
+    </div>
+  </div>
+
         <p>Need a full stack web developer? Tell me about your project.</p>
 
-        <!-- Project Inquiry Form -->
-        <form action="https://postman-echo.com/post" method="post">
-            <input type="email" name="email" required placeholder="Enter your email">
-            <select name="projectType" required>
+        
+        <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
+            <label for="email" class="left-label">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="projectType" class="left-label">Type of Project:</label>
+            <select id="projectType" name="projectType" required>
+                <option value="" disabled selected>Select One</option>
                 <option value="personal-website">Personal Website</option>
                 <option value="ecommerce">eCommerce</option>
                 <option value="game">Game</option>
             </select>
-            <textarea name="description" required placeholder="Enter your project concept here"></textarea>
-            <input type="file" name="attachment">
-            <label>
-                <input type="checkbox" name="consent" required>You agree to receive emails from me
-            </label>
+
+            <label for="description" class="left-label">Project Description:</label>
+            <textarea id="description" class="description" name="description" required placeholder="Enter your project concept here"></textarea>
+
+            <label for="attachment" class="left-label">Attachment:</label>
+            <input type="file" id="attachment" name="attachment" required>
+            <br>
+            <br>
+            <input type="checkbox" id="consent" name="consent" value="consent" required>
+            <label for="consent">  You agree to receive emails from me</label>
+            <br>
+    
+
             <button type="submit">Send</button>
         </form>
     </main>
